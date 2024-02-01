@@ -1,0 +1,342 @@
+@charset "utf-8";
+@import url('https://fonts.cdnfonts.com/css/press-start-2p');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url('https://fonts.cdnfonts.com/css/keania-one');
+
+*{margin: 0; padding: 0};
+ul{list-style: none;}
+a{text-decoration: none;}
+
+.full{
+    width: 100vw;
+    height: 100vh;
+    background: #2C75E2;
+    position: relative;
+    overflow: hidden;
+}
+
+.full img.back_c1{
+  width: 8%;
+  animation: bkAni 5s linear infinite;
+  box-shadow: 0 10px 10px #0000001f;
+  border-radius: 50%;
+} 
+
+
+
+@keyframes bkAni{
+  0%{margin-left: 0; margin-top: 10%; transform: rotate(0);}
+ /*  25%{margin-left: 20%; transform: rotate(180deg);} */
+  50%{margin-left: 55%; margin-top: 42%; transform: rotate(180deg);}
+/*   75%{margin-left: 80%; transform: rotate(300deg);} */
+  100%{margin-left: 100%; margin-top: 15%; transform: rotate(360deg);}
+}
+
+
+/* 메인토글 */
+.full .toggle{
+    width: 90px; height: 42px;
+    border-radius: 20px;
+    background: #FFDD3D;
+    position: absolute;
+    left: 38px; top: 38px;
+    display: block;
+}
+.full .toggle .toggleC{
+    width: 36px; height: 36px;
+    border-radius: 50px;
+    background: #fff;
+    position: absolute;
+    left: 6px; top: 2px;
+    cursor: pointer;
+}
+/* 클릭했을때 토글 바뀜 */
+/* .full .flip{
+  width: 90px; height: 42px;
+  border-radius: 20px;
+  background: black;
+  position: absolute;
+  left: 38px; top: 38px;
+  display: block;
+}
+.full .flip{
+  width: 36px; height: 36px;
+  border-radius: 50px;
+  background: #fff;
+  position: absolute;
+  left: 50px; top: 2px;
+} */
+.full .pf{
+  width: 960px; height: 600px;
+  background: #FFDD3D;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+.full .pf h1{
+  font-family: 'Press Start 2P';
+  font-size: 46px;
+  color: #DE1717ff;
+  position: absolute;
+  top: 40px;
+}
+.full .pf .profile_box{
+  width: 326px; height: 326px;
+  background: #000;
+  border-radius: 20px;
+  position: absolute;
+  left: 50px; 
+}
+.full .pf .profile_box img{
+  width: 100%;
+  position: absolute;
+  left: 0; top: 0;
+  display: flex;
+
+}
+.full .pf img{
+  width: 460px;
+  position: absolute;
+  top: 110px;
+}
+.full .pf .txt_profile{
+  position: absolute;
+  right: 180px; top: 150px;
+}
+.full .pf .txt_profile p{
+  font-family: 'pretendard';
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
+  line-height: 1.5;
+}
+
+
+@media screen and (max-width:1440px){
+  .full{overflow: hidden;}
+  .full .pf{
+/*     width: 100%; height: 100%; border-radius: 0;
+    position: relative; */
+  }
+  .full .toggle{z-index: 9; background: #000;
+  }
+  .full .pf h1{
+    width: 100%; height: 80px;
+    font-size: 40px;
+    line-height: 80px;
+    position: absolute;
+    top: 70px;
+    text-align: center;
+  /*   animation: profileAni 3s linear infinite; */
+  }
+
+  .full .pf .profile_box{
+    width: 40%; height: 55%;
+    position: absolute;
+    top: 35%;
+    overflow: hidden;
+  }
+  .full .pf .profile_box img{
+    width: 80%; height: 100%;
+    position: absolute;
+    top: 0; left: 8%;
+  }
+  .full .pf .txt_profile{
+    position: absolute;
+    left: 52%; top: 30%;
+    width: 50%; height: 40%; 
+  }
+  .full .pf .txt_profile p{
+    font-family: 'pretendard';
+    font-weight: 400;
+    font-size: 25px;
+    color: #000;
+    line-height: 1.5;
+  }
+  .full .cap{display: none;}
+}
+
+@keyframes profileAni{
+  0%{left: 0;}
+  25%{left: 20%;}
+  50%{left: 50%;}
+  75%{left: 75%;}
+  100%{left: 100%;}
+}
+
+@media screen and (max-width:1024px){
+  .full .pf{
+    width: 80%;
+  }
+  .full .toggle{z-index: 9; background: #000;
+  }
+  .full .pf .txt_profile p{
+    font-size: 22px;
+  }
+    .full .pf .txt_profile{
+    position: absolute;
+    left: 52%; top: 35%;
+    width: 50%; height: 40%; 
+  }
+
+}
+@media screen and (max-width:768px){
+  .full img.back_c1{
+    display: none;
+  }
+  .full .pf{
+    width: 100%; height: 100%;
+    border-radius: 0;
+  }
+  .full .pf .profile_box{
+    width: 40%; height: 50%;
+    position: absolute;
+    top: 35%; left: 5%;
+    overflow: hidden;
+  }
+  .full .pf .profile_box img{
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    object-fit: contain;
+  }
+  .full .pf .txt_profile{
+    position: absolute;
+    left: 50%; top: 38%;
+    width: 50%; height: 40%; 
+  }
+  .full .pf .txt_profile p{
+    font-family: 'pretendard';
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    line-height: 1.5;
+  }
+}
+
+/* @media screen and (max-width:640px){
+
+} */
+
+@media screen and (max-width:430px){
+  .full{width: 100%; overflow: hidden;}
+  .full img.back_c1{display: none;}
+  .full .toggle{z-index: 9; background: #000;
+  }
+  .full .pf{
+    width: 100%; height: 100%; border-radius: 0;
+    position: relative;
+  }
+  .full .pf h1{
+    width: 100%; height: 80px;
+    font-size: 30px;
+    position: absolute;
+    top: 12%;
+  }
+  .full .pf .profile_box{
+    width: 80%; height: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    overflow: hidden;
+  }
+  .full .pf .profile_box img{
+    width: 80%; height: 100%;
+    text-align: center;
+  }
+  .full .pf .txt_profile{
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translateX(-50%);
+    width: 90%; height: 35%; 
+  }
+  .full .pf .txt_profile p{
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width:360px){
+  .full .pf .txt_profile{
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translateX(-50%);
+    width: 90%; height: 35%;
+  }
+  .full .pf .txt_profile p{
+    width: 100%;
+    margin-left: 6%;
+  }
+}
+
+@media screen and (max-width:324px){
+  .full .pf .txt_profile p{
+    width: 80%; 
+    font-size: 18px;
+    margin-left: 8%;
+  }
+}
+@media screen and (max-height:810px){
+  .full .pf h1{
+    width: 100%; height: 80px;
+    font-size: 30px;
+    position: absolute;
+    top: 100px;
+  }
+}
+@media screen and (max-height:760px){
+  .full .pf .txt_profile{
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translateX(-50%);
+    width: 90%; height: 38%;
+  }
+  .full .pf .txt_profile p{
+    margin-left: 12%;
+    font-size: 16px;
+  }
+}
+@media screen and (max-height:720px){
+  .full .pf h1{
+    width: 100%; height: 80px;
+    font-size: 30px;
+    position: absolute;
+    top: 90px;
+  }
+}
+@media screen and (max-height:667px){
+  .full .pf h1{
+    position: absolute;
+    top: 12%;
+    width: 100%; height: 80px;
+    font-size: 30px;
+  }
+  .full .pf .profile_box{
+    width: 70%; height: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    overflow: hidden;
+  }
+  .full .pf .profile_box img{
+    width: 75%; height: 100%;
+    text-align: center;
+  }
+  .full .pf .txt_profile{
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translateX(-50%);
+    width: 90%; height: 38%;
+  }
+  .full .pf .txt_profile p{
+    margin-left: 12%;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,183 @@
+@charset "utf-8";
+@import url('https://fonts.cdnfonts.com/css/press-start-2p');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@import url('https://fonts.cdnfonts.com/css/keania-one');
+
+*{margin: 0; padding: 0};
+ul{list-style: none;}
+a{text-decoration: none;}
+
+.full{
+    width: 100vw;
+    height: 100vh;
+    background: #2C75E2;
+    position: relative;
+    overflow: hidden;
+}
+
+.full img.back_c1{
+  width: 8%;
+  animation: bkAni 5s linear infinite;
+  box-shadow: 0 10px 10px #0000001f;
+  border-radius: 50%;
+} 
+
+
+
+@keyframes bkAni{
+  0%{margin-left: 0; margin-top: 30%; transform: rotate(0);}
+  50%{margin-left: 55%; margin-top: 12%; transform: rotate(180deg);}
+  100%{margin-left: 100%; margin-top: 25%; transform: rotate(360deg);}
+}
+
+
+/* 메인토글 */
+.full .toggle{
+    width: 90px; height: 42px;
+    border-radius: 20px;
+    background: #FFDD3D;
+    position: absolute;
+    left: 38px; top: 38px;
+    display: block;
+}
+.full .toggle .toggleC{
+    width: 36px; height: 36px;
+    border-radius: 50px;
+    background: #fff;
+    position: absolute;
+    left: 6px; top: 2px;
+    cursor: pointer;
+}
+/* 클릭했을때 토글 바뀜 */
+/* .full .toogle .flip{
+  width: 90px; height: 42px;
+  border-radius: 20px;
+  background: black;
+  position: absolute;
+  left: 38px; top: 38px;
+  display: block;
+}
+.full .toggle .flip{
+  width: 36px; height: 36px;
+  border-radius: 50px;
+  background: #fff;
+  position: absolute;
+  left: 50px; top: 2px;
+} */
+.full .qr{
+  width: 668px; height: 629px;
+  background: #ECECEC;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+.full .qr img{
+  width: 400px;
+  position: absolute;
+  top: 26%;
+}
+.full .qr h1{
+  font-family: 'Press Start 2P';
+  font-size: 55px;
+  color: #DE1717ff;
+  position: absolute;
+  top: 10%;
+}
+.full .cap img:nth-child(1){
+  position: absolute;
+  left: 180px; bottom: 50px;
+}
+.full .cap img:nth-child(2){
+  position: absolute;
+  right: 150px; bottom: 50px;
+}
+
+@media screen and (max-width:430px){
+  .full{
+    background: #2C75E2;
+  }
+  .full .qr{
+    width: 80%; height: 40%;
+  }
+  .full .qr h1{
+    font-size: 34px;
+  }
+  .full .qr img{
+    width: 64%;
+  }
+  .full .cap{
+    display: none;
+  }
+  .full img.back_c1{
+    width: 15%;
+    animation: bkAni430 5s linear infinite;
+  }
+}
+
+@keyframes bkAni430{
+  0%{margin-left: 0; margin-top: 50%; transform: rotate(0);}
+  35%{margin-left: 70%; margin-top: 20%; transform: rotate(180deg);}
+  50%{margin-left: 55%; margin-top: 50%; transform: rotate(180deg);}
+  75%{margin-left: 20%; margin-top: 130%; transform: rotate(250deg);}
+  100%{margin-left: 100%; margin-top: 170%; transform: rotate(360deg);}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-height:810px){
+  .full .qr{
+    width: 80%; height: 40%;
+  }
+  .full .qr img{
+    width: 60%; height: 55%;
+    position: absolute; top: 34%;
+ }
+}
+@media screen and (max-height:736px){
+  .full .qr{
+    width: 80%; height: 42%;
+  }
+  .full .qr img{
+    width: 60%;
+    position: absolute; top: 32%;
+ }
+}
+@media screen and (max-height:667px){
+  .full .qr{
+    width: 82%; height: 50%;
+  }  .full .qr img{
+    width: 60%; height: 54%;
+    position: absolute; top: 31%;
+ }
+ 
+}
+@media screen and (max-height:580px){
+  .full .qr{
+    width: 80%; height: 53%;
+    position: absolute;
+    top: 54%;
+  } 
+  .full .qr img{
+    width: 60%; height: 54%;
+    position: absolute; top: 31%;
+ }
+}
+@media screen and (max-height:520px){
+  .full .qr{
+    width: 80%; height: 58%;
+    position: absolute;
+    top: 54%;
+  }
+}
