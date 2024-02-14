@@ -148,13 +148,11 @@ a {
 }
 
 .full .card2 .web {
-  width: 100%;
+  width: 100%; height: 400px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-
-
 }
 
 .full .card2 .web .web_box {
@@ -168,11 +166,11 @@ a {
   transition: 0.5s;
   display: flex;
   display: none;
+
 }
 
 .full .card2 .web .web_box a {
   width: 50%;
-  background: darkblue;
   z-index: 9999999999;
 }
 
@@ -192,7 +190,6 @@ a {
   top: 0;
   transition: all 0.6s;
   border-radius: 15px;
-  /*  transform: translateY(calc(-100% - 460px)); */
 }
 
 
@@ -207,10 +204,9 @@ a {
   position: absolute;
   bottom: 0;
   font-family: 'pretendard';
-/*   border-top: 1px solid #e8e8e8; */
   background: #000000aa;
   z-index: 9999;
-  /* margin-top: 40px; */
+
 
 }
 
@@ -226,25 +222,10 @@ a {
   display: flex;
 }
 
-.full .card2 .web .web_box .site_info p {
-  /* width: 100%; */
- /*  font-family: 'pretendard';
-  font-weight: 500;
-  font-size: 18px;
-  color: #000;
-  display: flex;
-  margin-top: 80px;
-  justify-content: center;
-  color: rgb(179, 6, 112);
-  background: darkblue; */
-  /*   position: absolute;
-  right: 60px; top: 50px; */
-}
 
 .full .card2 .web .web_box .site_info .skill {
   width: 100%;
   height: 100%;
-/*   background: #008F17; */
   position: absolute;
   bottom: 0;
   display: flex;
@@ -418,7 +399,24 @@ a {
   }
 
 }
+@media screen and (max-width:1680px){
+/*   .full .card2 .web {
+    height: 100%; height: 100%;
+    display: flex;
+    
+  } */
+/*   .full .card2 .web .web_box {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  .full .card2 .web .web_box .site_info{
+    position: absolute;
+    left: 0;
 
+  }
+}
 @media screen and (max-width:1440px) {
   .full .card .web{
     display: flex;
@@ -459,7 +457,6 @@ a {
     position: absolute;
     left: 35%;
     width: 20%;
-   /*  background: darkblue; */
   }
   .full .play_box .bt_button img{
     width: 70%;
@@ -519,8 +516,6 @@ a {
   }
   .full .header{
     width: 100%; height: 20%;
-/*     position: absolute; */
-/*     box-shadow: 0 5px 5px #c507071f; */
     z-index: 9;
     border-bottom: 25px solid #10498C;
     position: relative;
@@ -533,12 +528,10 @@ a {
   .full .header .h_img img{
     position: absolute;
     left: 100%; top: 44%;
-  /*   border-radius: 50%; */
     width: 50px; height: 50px;
   }
   .full .header h1 {
     font-size: 40px;
-/*     height: 100%; */
     position: absolute;
     top: 12%;
     margin-right: 10%;
@@ -548,8 +541,6 @@ a {
   .full .card {
     width: 85%;
     height: 50%;
-/*     position: absolute;
-    top: 0; */
     border-radius: 0;
     display: flex;
     align-items: center;

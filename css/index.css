@@ -846,6 +846,20 @@ a {
 
 /* 반응형 */
 
+@media screen and (max-width:1680px){
+  .full .txt_box{
+    width: 38%; height: 45%;
+    position: absolute; left: 65%;
+  }
+  .full .txtL{
+    position: relative; right: 10%;
+    width: 300px; height: 300px;
+  }
+  .full .txtL h2{
+    position: absolute;
+    right: -30%;
+  }
+}
 @media screen and (max-width:1440px){
   .full .img_box{width: 38%; height: 100%; position: relative; left: 33%;}
   .full .img_box .box_glass{width: 100%; height: 40%;; position: relative;}
