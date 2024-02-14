@@ -4,12 +4,13 @@ $(function () {
   let $boxAllArr = document.querySelectorAll('.card2 .web_box');
   let random = []
   let hTop = [];
+  
   function ran() {
     let eqI = 0;
     let ch1 = 0;
     interWeb = setInterval(() => {
-      $('.full .card .web .web_box').removeClass('green').eq(eqI).addClass('green');
-      if (eqI < 2) {
+      $('.full .card .web .web_box').removeClass('green').eq(eqI).addClass('green');  //초록색 랜덤상황 주기
+      if (eqI < 2) {  
         eqI++;
       } else {
         eqI = 0;
@@ -20,17 +21,15 @@ $(function () {
           setTimeout(() => {
             $('.full .card').hide();
             $('.full .card2').show();
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 3; i++) {  //.card2 .web_box 랜덤
               random[i] = Math.floor(Math.random() * $boxAllArr.length);
-              for (let j = 0; j < i; j++) {//중복제거
+              for (let j = 0; j < i; j++) { //중복제거
                 if (random[i] == random[j]) {
                   i--;
                   break;
                 }
               }
-           /*    console.log(random[i]) */
               hTop[i] = (Math.ceil($('.full .card2 .web .web_box').eq(random[i]).show().find('img').height()));
-           /*    console.log(hTop); */
             }
           }, 50);
           clearInterval(interWeb);

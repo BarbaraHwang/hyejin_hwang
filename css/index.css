@@ -37,7 +37,7 @@ a {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-/*   display: none; */
+
 }
 
 /* 배경 반짝이 효과 */
@@ -387,7 +387,6 @@ a {
 
 .full .img_box .topG {
   width: 100%;
-/*   margin-top: 20px; */
   position: absolute;
   left: 0; top: 0;
 }
@@ -406,12 +405,6 @@ a {
   margin-left: 40px;
 }
 
-/* .full .img_box .ballf img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 .full .img_box .ball{
   width: 98%; height: 87%;
   border-radius: 10%;
@@ -454,7 +447,6 @@ a {
 .full .img_box .ballf img.move{
   animation-play-state: paused;
   margin-left:- 95px;
-/*   transform: rotate(0); */
   z-index: 14;
   animation: falling 2s forwards;
 }
@@ -491,17 +483,11 @@ a {
   height: 80%;
   position: absolute;
   left: 0; top: 80px;
-/*   position: relative;
-  margin-top: 20px; */
-/*   left: 50%;
-  top: 20%;
-  transform: translate(-50%, -50%); */
 }
 
 .full .img_box .box_glass img.imgg {
   width: 100%; height: 53%;
   position: absolute;
-/*   top: 42%; */
   opacity: 0.8;
   z-index: 14;
 
@@ -511,13 +497,9 @@ a {
   position: absolute;
   bottom: 68px;
   bottom: 40px; left: 0;
-/*   margin-top: 280px; */
 }
 .full .img_box .m_box img.imgb {
   width: 100%;
-/*   top: 74%; */
-/*   margin-top: 200px; */
-/*   position: absolute; */
 
 }
 .full .img_box .m_box_t{
@@ -526,19 +508,16 @@ a {
   bottom: 350px;
   left: 0;
   z-index: 14;
-  /* margin-top: 470px; */
 }
 .full .img_box .m_box_t img.imgbt {
   width: 100%; height: auto;
   margin-top: 120px;
-  /* position: absolute;
-  top: 63%; */
 
 }
 .full .img_box .bt_group{
   width: 100%; height: 400px;
   position: absolute;
-  left: 0; /* top: 530px; */
+  left: 0; 
   bottom: 7px;
   z-index: 14;
 }
@@ -547,22 +526,15 @@ a {
   position: absolute;
   right: 80px;
   top: 0;
-/*   top: 22%;
-  left: 84%; */
-/*   margin-top: 110px; */
 
 }
 .full .img_box img.imgcs {
   width: 54%; height: 110px;
-/*   margin-top: 65px;
-  margin-left: ; */
   position: absolute;
   bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 16;
-/*   top: 72%; left: 48%; */
-/*   margin-top: 265px; */
 
 }
 
@@ -571,17 +543,12 @@ a {
   position: absolute;
   left: 50%;
   transform: translate(-50%,100px);
-  top: 46%;
-/*   position: relative;
-  margin-left: 265px;
-  margin-top: 80px; */
-/*   transform: translate(-48%); */
+  top: 45%;
   cursor: pointer;
   z-index: 14;
 }
 .full .img_box .imgc img.cc{
-/*   position: absolute;
-  left: 50%; top: 50%; */
+
   width: 100%; height: auto;
 
 }
@@ -589,11 +556,15 @@ a {
   width: 101px; height: auto;
   left: 50%;
   top: 50%;
-/*   left: 50%;
-  top: 80px; */
+
   position: absolute;
   transition: all 1s;
-  transform: translate(-50%,-50%) rotate(0);
+  transform: translate(-50%,-50%) rotate(0) scale(1.1);
+}
+
+@keyframes rt{
+  0%{transform: scale();}
+  100%{}
 }
 
 .full .img_box.on .imgc img.imgr {
@@ -606,9 +577,6 @@ a {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-/*   position: absolute;
-  top: 93%; left: 49%; */
-/*   margin-top: 440px; */
   z-index: 10;
 }
 
@@ -822,15 +790,6 @@ a {
   }
 }
 
-/* .full .img_box .btn.start .btn_press1,
-.full .img_box .btn.start .btn_press2 {
-  width: 0px;
-  height: 130px;
-  display: block;
-  display: flex;
-  flex-direction: column;
-  background: darkblue;
-} */
 
 .full .img_box .btn  .btn1{
   width: 80px;
@@ -850,49 +809,43 @@ a {
   text-align: center;
 }
 
+.cm{
+  width: 250px; height: 70px;
+  background-color: #fff;
+  z-index: 9999999;
+  position: absolute;
+  left: 49%; top: 49%;
+  transform: translate(-49%, -49%);
+  border-radius: 10px ;
+}
+.cm:after{
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 28px solid transparent;
+	border-top-color: #fff;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -14px;
+	margin-bottom: -26px;
+}
+.cm h3{
+  font-family: 'Press Start 2P';
+  font-size: 25px;
+  color: red;
+  text-align: center;
+  line-height: 70px;
+}
+
+
+
+
 
 /* 반응형 */
-@media screen and (max-width:2560px){
-/*   .full .img_box{width: 35%}
-  .full .img_box .box_glass{width: 100%; height: 90%;; position: relative;}
-  .full .img_box .topG {width: 100%; height: 100%; margin-top: 1%; position: absolute;}
-  .full .img_box .topG img.imgt{position: absolute; top: 0; width: 100%;height: 7%}
-  .full .img_box .topG p{position: absolute; left: 5%; height: 40px; width: 100%; font-size: 35px;}
-  .full .img_box .m_box_t {width: 100%; height: 31%; position: absolute; bottom: 20%;}
-  .full .img_box .m_box_t img.imgbt{width: 100%; height: 100%; position: absolute; bottom: 0;}
-  .full .img_box .imgc {
-    width: 24%; 
-    position: absolute;
-    top: 50%; left: 49%;
-  } */
-/*   .full .img_box .imgc img.imgr{
-    width: 65%;
-    position: absolute;
-    left: 50%; top: 22%;
-    transform: translateX(-50%);
-  }
-  .full .img_box.on .imgc img.imgr{
-    position: absolute;
-    left: 50%; top: 22%;
-    transform: translateX(-50%) rotate(360deg);
-  }
-  .full .img_box .bt_group{height: 36%; position: absolute; top: 56%;}
-  .full .img_box .bt_group img.imgcs{
-    position: absolute;
-    top: 48%;
-    width: 50%; height: 33%;
-  }
-  .coin_d{
-    width: 100%; height: 80%;
-    position: absolute;
-    bottom: 0;
-  }
-  .coin_d img{
-    width: 900px;
-    position: absolute;
-    top: 8%; left: -30px;
-  } */
-}
+
 @media screen and (max-width:1440px){
   .full .img_box{width: 38%; height: 100%; position: relative; left: 33%;}
   .full .img_box .box_glass{width: 100%; height: 40%;; position: relative;}
