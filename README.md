@@ -1,7 +1,7 @@
 ![og](https://github.com/BarbaraHwang/hyejin_hwang/assets/145205093/29e682cd-0975-4eb4-bcf0-51d71cfa0abd)
 
 
-<h1 style="color:red;">Welcome To Hyejin's Portfolio</h1>
+<h1>Welcome To Hyejin's Portfolio</h1>
 
 <h3>⭐ 혜진's 포트폴리오 사용법</h3>
 
